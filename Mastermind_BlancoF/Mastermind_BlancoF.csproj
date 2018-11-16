@@ -55,6 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ColorConverter.cs" />
+    <Compile Include="UserControls\PegButtonContainerControl.xaml.cs">
+      <DependentUpon>PegButtonContainerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PegButtonControl.xaml.cs">
+      <DependentUpon>PegButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PegContainerControl.xaml.cs">
+      <DependentUpon>PegContainerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PegControl.xaml.cs">
+      <DependentUpon>PegControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,8 +80,25 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\PegButtonContainerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PegButtonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PegContainerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PegControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Peg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

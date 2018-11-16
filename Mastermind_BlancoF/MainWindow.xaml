@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mastermind_BlancoF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        Title="MainWindow" Height="700" Width="600" Background="Gray">
+    <DockPanel>
+        <Label DockPanel.Dock="Top"
+               Content="Mastermind"
+               FontSize="24"
+               FontWeight="Bold"
+               HorizontalAlignment="Center"
+               Foreground="White"/>
+        <StackPanel DockPanel.Dock="Top"
+                    x:Name="AnswerPanel"
+                    Visibility="Hidden"
+                    Margin="120 10">
+
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom" Margin="20" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="SubmitButton"
+                    Content="Submit"
+                    Height="30"
+                    Width="80"
+                    Click="SubmitButton_Click"/>
+            <Button x:Name="VisibleButton"
+                    Content="Show"
+                    Height="30"
+                    Width="80"
+                    Click="VisibleButton_Click"/>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="SelectionPanel"
+                        Grid.Column="0"
+                        Margin="10">
+                <!--- Selections -->
+            </StackPanel>
+            <StackPanel x:Name="HintPanel"
+                        Grid.Column="1"
+                        Margin="10">
+                <!--- Hints -->
+            </StackPanel>
+        </Grid>
+    </DockPanel>
 </Window>

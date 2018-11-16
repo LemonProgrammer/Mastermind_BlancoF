@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Mastermind_BlancoF.UserControls.PegButtonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mastermind_BlancoF.UserControls"
+             xmlns:converter="clr-namespace:Mastermind_BlancoF.Converters"
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
+             d:DesignHeight="50" d:DesignWidth="50">
+    <UserControl.Resources>
+        <converter:ColorConverter x:Key="ColorConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Rectangle Stroke="Black"
+                    Fill="Transparent"
+                   MinHeight="40"
+                   MinWidth="40"
+                   />
+        <Button x:Name="PegButton"  Background="Transparent" Click="PegButton_Click">
+            <Ellipse Stroke="Black"
+                 Width="30"
+                 Height="30"
+                 Fill="{Binding Path=Peg.Color, Converter={StaticResource ColorConverter}}"/>
+        </Button>
+    </Grid>
+</UserControl>
